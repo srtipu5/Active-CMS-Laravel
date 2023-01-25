@@ -1,0 +1,8 @@
+
+use App\Http\Controllers\Payment\BkashController;   // add line no 1 in admin.php;
+
+
+// add under admin midleware in admin.php
+     Route::controller(BkashController::class)->group(function () {
+        Route::get('/bkash/refund', 'getRefund')->name('get.refund');
+        Route::post('/bkash/refund', 'refund')->name('post.refund');
