@@ -3,7 +3,7 @@
 @section('content')
 
  <div style="text-align: center;">
-     <form action="{ route('post.refund') }}" method="POST">
+     <form action="/admin/bkash/refund" method="POST">
          @csrf
          <div class="form-group">
              <input type="text" class="form-control" name="orderCode" placeholder="Order Code" required >
